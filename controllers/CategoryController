@@ -1,0 +1,32 @@
+
+
+
+const list = ["Shoes","clothes","Accessories "]
+
+function Display_categories(req,res){
+
+res.render("category.ejs",{title : "Categories",categories : list})
+
+}
+
+function add_category_get(req,res){
+
+res.render("add_cat.ejs",{title : "Add"})
+
+}
+
+function add_category_post(req,res){
+
+const {cat_name} = req.body
+
+list.push(cat_name)
+
+res.redirect("/category")
+
+}
+
+module.exports = {
+  Display_categories,
+  add_category_get,
+  add_category_post
+};
