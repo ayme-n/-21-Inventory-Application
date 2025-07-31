@@ -15,7 +15,16 @@
         <li><button><a href="/category/add">ADD</a></button></li>
 
         <% categories.forEach((cat)=>{ %>
-            <li><%= cat %> <button>VIEW</button> <button>UPDATE</button> <button>Delete</button></li>
+            <li>
+                
+            <%= cat.name %> 
+            <button>VIEW</button>
+            <button><a href="/category/update/<%=cat.id%>">UPDATE</a></button> 
+            <form action="/category/delete/<%=cat.id%>" method="POST" style="display: inline;"><button>Delete</button></form>
+
+            
+
+            </li>
         <%})%>
     </ul>
 

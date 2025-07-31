@@ -9,7 +9,8 @@
 
     <h1><%= title %></h1>
 
-    
+
+   
 
     <form action="/category/add" method="POST">
 
@@ -19,8 +20,11 @@
 
         <input type="submit" value="add">
 
+    
+
     </form>
     
+     <%-include("./Form_error.ejs")%>
     
 </body>
 </html>
