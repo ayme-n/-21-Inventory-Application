@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1><%= title %></h1>
+
+    
+
+    <form action="/category/<%=id%>/item/update/<%=item_id%>" method="POST">
+
+
+        <label for="name">name</label>
+        <input type="text" name="item_name" value="<%=name%>">
+
+        <br>
+
+        <label for="price">price</label>
+        <input type="number" min="0" name="item_price" value="<%=item_price%>"> 
+
+        <br>
+
+        <label for="item_img">image URL</label>
+        <input type="text" min="0" name="item_img" value="<%=item_img%>"> 
+
+        <br>
+
+        <label for="cat_id">Category ID</label>
+        <input type="text" min="0" name="cat_id" value="<%= id%>">
+
+        <br>
+        
+
+        <input type="submit" value="UPDATE">
+
+    </form>
+    
+    
+</body>
+</html>

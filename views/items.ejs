@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1><%= title %></h1>
+
+    
+
+    <ul>
+        <li><button><a href="/category/<%=id%>/item/add">ADD</a></button></li>
+
+        <% items.forEach((item)=>{ %>
+            <li>
+                
+            <%= item.name %> 
+            <button><a href="/category/<%=id%>/item/<%=item.id%>">VIEW</a></button>
+            <button><a href="/category/<%=id%>/item/update/<%=item.id%>">UPDATE</a></button> 
+            <form action="/category/<%=id%>/item/delete/<%=item.id%>" method="POST" style="display: inline;"><button>Delete</button></form>
+
+            
+
+            </li>
+        <%})%>
+    </ul>
+
+    <button><a href="/category">Category</a></button>
+    
+</body>
+</html>

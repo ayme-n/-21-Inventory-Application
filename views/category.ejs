@@ -18,7 +18,7 @@
             <li>
                 
             <%= cat.name %> 
-            <button>VIEW</button>
+            <button><a href="/category/<%=cat.id%>/items">View</a></button>
             <button><a href="/category/update/<%=cat.id%>">UPDATE</a></button> 
             <form action="/category/delete/<%=cat.id%>" method="POST" style="display: inline;"><button>Delete</button></form>
 

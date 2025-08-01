@@ -3,9 +3,10 @@
 const express = require("express")
 const path = require("node:path");
 const { title } = require("node:process");
-
+require("dotenv").config();
 
 const category = require("./routes/category")
+
 const index = require("./routes/index")
 
 
@@ -22,6 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/",index)
 app.use("/category",category)
+
 
 app.listen("3000",()=>{
     console.log("listening")

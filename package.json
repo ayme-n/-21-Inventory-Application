@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/ayme-n/-21-Inventory-Application#readme",
   "dependencies": {
+    "dotenv": "^17.2.1",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
     "express-validator": "^7.2.1",
